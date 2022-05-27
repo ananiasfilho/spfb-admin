@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: spfbl-admin
-        image: spfbl-admin:latest
+        image: kmee/spfbl-admin:0.0.1
         resources:
           requests:
             cpu: 100m
