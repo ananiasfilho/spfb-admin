@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spfbl-admin
+  name: frontend-spfbl-admin
 spec:
   selector:
     matchLabels:
       app: spfbl-admin
-      tier: spfbl-admin
+      tier: frontend-spfbl-admin
   replicas: 1
   template:
     metadata:
       labels:
         app: spfbl-admin
-        tier: spfbl-admin
+        tier: frontend-spfbl-admin
     spec:
       containers:
       - name: spfbl-admin
