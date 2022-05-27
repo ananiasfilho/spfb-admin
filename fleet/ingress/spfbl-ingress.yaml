@@ -4,10 +4,10 @@ metadata:
   name: spfbl-admin
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: spfbl-admin-dev
+    cert-manager.io/cluster-issuer: letsencrypt-spfbl-admin
 spec:
   rules:
-    - host: spfbl-admin.kmee.dev.br
+    - host: spfbl.admin.kmee.dev.br
       http:
         paths:
           - path: /
@@ -16,8 +16,8 @@ spec:
               servicePort: 8000
   tls:
     - hosts:
-        - spfbl-admin.kmee.dev.br
-      secretName: spfbl-admin-dev
+        - spfbl.admin.kmee.dev.br
+      secretName: letsencrypt-spfbl-admin
 status:
   loadBalancer:
     ingress:
