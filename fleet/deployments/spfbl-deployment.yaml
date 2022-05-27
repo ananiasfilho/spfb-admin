@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-spfbl-admin
+  name: spfbl-admin-frontend
 spec:
   selector:
     matchLabels:
       app: spfbl-admin
-      tier: frontend-spfbl-admin
-  replicas: 3
+      tier: spfbl-admin-frontend
+  replicas: 1
   template:
     metadata:
       labels:
         app: spfbl-admin
-        tier: frontend-spfbl-admin
+        tier: spfbl-admin-frontend
     spec:
       containers:
       - name: spfbl-admin
         image: kmee/spfbl-admin:0.0.1
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: 100m
