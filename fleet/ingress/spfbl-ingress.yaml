@@ -12,7 +12,7 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: frontend-spfbl
+              serviceName: frontend-spfbl-admin
               servicePort: 8000
   tls:
     - hosts:
